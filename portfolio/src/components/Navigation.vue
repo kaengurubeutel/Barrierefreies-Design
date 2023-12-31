@@ -1,11 +1,16 @@
 <script setup lang="ts">
+import { useRouter } from 'vue-router';
+const route = useRouter()
 let canGoBack = true; //ToDo realtime
+let gotoHome = () => {
+    route.push("/");
+} 
 </script>
 
 <template>
     <nav>
-        <a href="" id="menubutton">themen</a>
-        <button v-if="canGoBack" aria-label="backbutton" id="backbutton">
+        <a href="/themen" id="menubutton">themen</a>
+        <button @click="gotoHome" v-if="canGoBack" aria-label="backbutton" id="backbutton">
             <img height="45px" src="../../content/back.svg" alt="backbutton">
         </button>
     </nav>
@@ -31,6 +36,11 @@ let canGoBack = true; //ToDo realtime
     border-radius: 23px;
 }
 
+#backbutton:focus {
+    background: #2E82FF;
+    border-radius: 23px;
+}
+
 #menubutton {
     color: #FCFCFC;
     font-family: Noto Sans;
@@ -50,21 +60,31 @@ let canGoBack = true; //ToDo realtime
     color: #101010
 }
 
+#menubutton:focus {
+    background-color: #2E82FF;
+    color: #101010
+}
+
 h1 {
     margin: 0;
     padding: 0;
 }
 
 nav {
+    position:absolute;
+    z-index:100;
+    top:0;
+   
+    width:100%;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
-    margin-left: 20px;
+    gap:20px;
     margin-right: 20px;
-    margin-top: 30px;
+    padding-top: 30px;
     height: 20px;
 
 }
