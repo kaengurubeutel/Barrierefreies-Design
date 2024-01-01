@@ -6,7 +6,7 @@
     <h1>Gesetzlich</h1>
     <section>
       <article>
-        <h2>1.1 Allgemein</h2>
+        <h2>Allgemein</h2>
         <p>
           Barrierefreie Webseiten bieten viele Vorteile, sowohl für die
           Unternehmen, die sie Verwenden als auch für Nutzer:innen im Internet.
@@ -16,7 +16,7 @@
         </p>
       </article>
       <article>
-        <h2>1.2 Richtlinien zur Barrierefreiheit</h2>
+        <h2>Richtlinien zur Barrierefreiheit</h2>
         <p>
           Grundlage der Konkreten Anforderungen an Barrierefreiheit ist nach § 3
           Absatz 2 Satz 1 BFSG, Anhang 1 der der
@@ -27,7 +27,7 @@
         </p>
       </article>
       <article>
-        <h2>1.3 Barrierefreiheitsstärkungsgesetz (BFSG)</h2>
+        <h2>Barrierefreiheitsstärkungsgesetz (BFSG)</h2>
         <p>
           Im Juni 2021 wurde das BFSG verabschiedet, damit wurde der European
           Accessibility Act (EAA) umgesetzt, eine Richtline zur Barrierefreiheit
@@ -38,7 +38,7 @@
         </p>
       </article>
       <article>
-        <h2>1.4 Anwendungsgebiet</h2>
+        <h2>Anwendungsgebiet</h2>
         <p>
           Ab dem 28.06.2025 wird sich an dieser Stelle eine Menge ändern.
           Digitale Angebote, die ab diesem Datum veröffentlicht werden, müssen
@@ -54,7 +54,7 @@
         </p>
       </article>
       <article>
-        <h2>1.5 Ausnahmen</h2>
+        <h2>Ausnahmen</h2>
         <ul>
           <li>
             <p>

@@ -43,7 +43,6 @@ let gotoHome = () => {
 
 #menubutton {
     color: #FCFCFC;
-    font-family: Noto Sans;
     font-style: normal;
     font-weight: 800;
     line-height: 128.607%;
