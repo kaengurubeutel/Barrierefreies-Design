@@ -48,6 +48,7 @@ menu{
     font: inherit;
     cursor: pointer;
     outline: inherit;
+    font-family: "altivo", sans-serif;
     width:100vw;
     padding-top:15px;
     padding-bottom:15px;
