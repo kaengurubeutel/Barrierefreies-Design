@@ -6,12 +6,12 @@
 <template>
 <main>
     <h1>Farben und Kontraste</h1>
-    <Section>
-        <article>
+    <article>
+        <section>
             <h2>Allgemein</h2>
             <p>Für Menschen mit Sehbeeinträchtigungen oder Farbenblindheit ist es besonders wichtig, dass auf Webseiten darauf geachtet wird, dass alle Texte und Elemente gut erkennbar und unterscheidbar sind. Die WCAG bietet hierfür die notwendigen Richtlinien, welche in den folgenden Absätzen jeweils durch ein Negativ Beispiel sowie eine Variante nach WCAG AA und WCAG AAA veranschaulicht werden.</p>
-        </article>
-        <article>
+        </section>
+        <section>
             <h2>Kontraste</h2>
             <ul>
                 <li>
@@ -27,12 +27,12 @@
                     <p>Hierzu zählt Text ab 18,5px in bold oder ab 24px in regular, Aktive UI-Elemente und Infografiken</p>
                 </li>
             </ul>
-        </article>
-        <article>
+        </section>
+        <section>
             <h2>Farben</h2>
             <p>Bei Farben ist es wichtig, dass sie auch für Menschen mit einer Farbenblindheit unterscheidbar sind.  Das heißt dass ZB Grün und Rottöne trotz der Farbenblindheitblindheit unterscheidbar sind.</p>
-        </article>
-    </Section>
+        </section>
+    </article>
 </main>    
 </template>
 

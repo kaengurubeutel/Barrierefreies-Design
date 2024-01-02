@@ -4,8 +4,8 @@
 <template>
   <main>
     <h1>Gesetzlich</h1>
-    <section>
-      <article>
+    <article>
+      <section>
         <h2>Allgemein</h2>
         <p>
           Barrierefreie Webseiten bieten viele Vorteile, sowohl für die
@@ -14,8 +14,8 @@
           verpflichtend ist, wann genau und in welchem Umfang soll in diesem
           Artikel geklärt werden.
         </p>
-      </article>
-      <article>
+      </section>
+      <section>
         <h2>Richtlinien zur Barrierefreiheit</h2>
         <p>
           Grundlage der Konkreten Anforderungen an Barrierefreiheit ist nach § 3
@@ -25,8 +25,8 @@
             >EU-Richtlinie 2019/882 des Europäischen Parlaments.</a
           >
         </p>
-      </article>
-      <article>
+      </section>
+      <section>
         <h2>Barrierefreiheitsstärkungsgesetz (BFSG)</h2>
         <p>
           Im Juni 2021 wurde das BFSG verabschiedet, damit wurde der European
@@ -36,8 +36,8 @@
           diese Verpflichtung nur für Digitale Angebote von Öffentlichen
           Behörden sowie Staatlich (Co-) Finanzierten Anbietern.
         </p>
-      </article>
-      <article>
+      </section>
+      <section>
         <h2>Anwendungsgebiet</h2>
         <p>
           Ab dem 28.06.2025 wird sich an dieser Stelle eine Menge ändern.
@@ -52,8 +52,8 @@
             >https://bfsg-gesetz.de/1-bfsg/</a
           >
         </p>
-      </article>
-      <article>
+      </section>
+      <section>
         <h2>Ausnahmen</h2>
         <ul>
           <li>
@@ -90,9 +90,9 @@
             <p>Digitale Archive, die nicht aktualisiert werden</p>
           </li>
         </ul>
-      </article>
+      </section>
 
-      <article>
+      <section>
         <h2>Übergangsregelungen</h2>
         <ul>
           <li>
@@ -112,16 +112,16 @@
             </p>
           </li>
         </ul>
-      </article>
-      <article>
+      </section>
+      <section>
         <h2>Überwachung</h2>
         <p>
           Die Einhaltung des Gesetzestextes wird Stichprobenartig von den
           Marktüberwachungsbehörden der Länder überprüft. Bei Nichteinhaltung
           riskieren Anbieter je nach Schweregrad Bußgelder.
         </p>
-      </article>
-    </section>
+      </section>
+    </article>
   </main>
 </template>
 

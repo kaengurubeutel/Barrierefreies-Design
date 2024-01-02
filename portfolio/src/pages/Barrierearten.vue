@@ -5,8 +5,8 @@
 <template>
     <main>
         <h1 id="beschriftung">Barrierearten</h1>
-        <section>
-            <article>
+        <article>
+            <section>
                 <h2>Allgemein</h2>
                 <p>In Deutschland leben nach dem <a href="https://de.statista.com/themen/261/behinderung/">Statistischen Bundesamt</a> mindestens 9,4% der Bevölkerung mit einer
                     schweren Behinderung. 30% der Bevölkerung sind aus unterschiedlichen Gründen auf Barrierefreies Design
@@ -15,8 +15,8 @@
                     Dieser Artikel soll eine Übersicht über die Barrieren bieten, die aus den verschiedenen Arten von
                     Behinderungen resultieren können.
                 </p>
-            </article>
-            <article>
+            </section>
+            <section>
                 <h2>Visuelle Barrieren</h2>
                 <p>Die Visuelle Kommunikation ist der wichtigste Bestandteil eines Interfaces.
                     Umso schwieriger ist die Bedienung deshalb für Menschen, die im Sehen graduell oder komplett
@@ -39,46 +39,46 @@
                             unterscheidbar und lesbar sind. </p>
                     </li>
                 </ul>
-            </article>
+            </section>
 
-            <article>
+            <section>
                 <h2>Auditive Barrieren</h2>
                 <p>Neben der Visuellen Einschränkung gibt es auch Auditive Einschränkungen, die das Hören beeinträchtigen.
                     Gerade bei Videos oder Audiocontent ist es deshalb wichtig, dass es ein Audioskript gibt, dass
                     unterstützend oder als Ersatz funktionieren kann.
                     Ebenfalls sollte nie ausschließlich Audiofeedback für Aktionen verwendet werden.
                 </p>
-            </article>
+            </section>
 
-            <article>
+            <section>
                 <h2>Motorische Barrieren</h2>
                 <p>Motorische Barrieren können durch Verletzungen oder Erkrankungen entstehen und die Interaktion mit dem UI
                     erschweren. Hierbei soll darauf geachtet werden, dass alle Elemente über die Tabtaste benutzt werden
                     können und dass immer genug Zeit vorhanden ist eine Aktion auszuführen, dies erleichtert ebenfalls die
                     Bedienung mittels Screenreader.</p>
-            </article>
-            <article>
+            </section>
+            <section>
                 <h2>Kognitive Barrieren</h2>
                 <p>Auf dem Bereich der Kognitiven Barrieren gibt es ebenfalls unterschiedlichste Ausprägungen und Arten der
                     Beeinträchtigung. Menschen können durch Leseschwächen, Aufmerksamkeitsstörungen und Neurodivergenz
                     abgelenkt oder gestört werden. Hierbei ist es wichtig diese Störfaktoren in Animationen, Text und
                     Komposition der Seite zu vermeiden. </p>
-            </article>
-            <article>
+                </section>
+            <section>
                 <h2>Psychische Barrieren</h2>
                 <p>Neben den Kognitiven Barrieren gibt es ebenfalls Psychische Erkrankungen, welche berücksichtigt werden
                     müssen. Menschen mit diesen Erkrankungen können durch bestimmte Inhalte getriggert werden und sollten
                     davor mit Hilfe von Contentwarungen geschützt werden.</p>
-            </article>
+                </section>
 
-            <article>
+            <section>
                 <h2>Soziale Barrieren</h2>
                 <p>Nicht jeder Mensch ist mit der Bedienung von Digitalen Interfaces aufgewachsen und kennt deshalb
                     bestimmte Bedienmöglichkeiten nicht, welche Jüngere Menschen autodidaktisch erlernt haben. Deshalb
                     sollte nicht davon ausgegangen werden, dass komplexere Bedienmechanismen bereits bekannt sind. </p>
-            </article>
+                </section>
 
-    </section>
+        </article>
 </main>
 
 </template>

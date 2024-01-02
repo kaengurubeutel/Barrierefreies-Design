@@ -5,12 +5,12 @@
 <template>
   <main>
     <h1>Accessible Rich Internet Applications (ARIA)</h1>
-    <section>
-        <article>
+    <article>
+        <section>
             <h2>Allgemein</h2>
             <p>ARIA tags sind eine Ergänzung für HTML, die Screenreadern zusätzliche Informationen über DOM-Elemente geben und damit Menschen mit einer Sehbehinderung helfen können, Webseiten besser zu navigieren.</p>
-        </article>
-        <article>
+        </section>
+        <section>
             <h2>Welche Aria Rollen gibt es?</h2>
             <pre>
                 <code>
@@ -62,8 +62,8 @@
             <p>Bei sich verändernden Objekten kann der Screenreader nur ein Element auf einmal vorlesen, dafür sind Live Region roles da, die dem Screenreader erklären, was als erstes vorgelesen werden soll und was z.b. gar nicht vorgelesen werden soll.</p>
             <h3>Window Roles</h3>
             <p>Wenn sich ein neues Fenster über dem aktuellen Fenster öffnet werden diese Rollen verwendet.</p>
-        </article>
-        <article>
+        </section>
+        <section>
             <h3>Weitere Regeln für den Umgang mit ARIA: </h3>
             
             <ol>
@@ -74,8 +74,8 @@
                 <li>Alle interaktiven Elemente müssen einen „accessible name“ haben.</li>
                 <li><a href="https://www.w3.org/TR/using-aria/#rule1">dokumentation</a></li>
             </ol>
-        </article>
-    </section>
+        </section>
+    </article>
   </main>
 </template>
 
