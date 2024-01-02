@@ -4,8 +4,9 @@
 
 <template>
   <main>
-    <h1>Typografie</h1>
+    
     <article>
+      <h1>Typografie</h1>
         <section>
             <h2>Allgemein</h2>
             <p>Typografie ist wichtig, damit Informationen für alle Menschen leicht verständlich sind. Besonders für Menschen mit verschiedenen Bedürfnissen ist es wichtig, dass Texte gut lesbar sind. Wenn man die Schriftart und -größe richtig wählt, können Texte nicht nur schön aussehen, sondern auch für alle leichter zu verstehen sein. Das hilft, dass Informationen für jeden zugänglich sind, unabhängig von ihren individuellen Voraussetzungen. Auf Webseiten werden verschiedene Textarten verwendet, die neben allgemeinen Informationen zur Schriftwahl in den folgenden Artikeln erklärt werden.</p>

@@ -4,8 +4,9 @@
 
 <template>
   <main>
-    <h1>Semantisches HTML</h1>
+    
     <article>
+        <h1>Semantisches HTML</h1>
         <section>
             <h2>Allgemein</h2>
             <p>Seit HTML5 gibt es neue Semantische Tags, die in der Struktur von Html Seiten benutzt werden sollten. So können durch die Benennung von Tags, Informationen an z.B.: Screenreader geschickt werden, die bei dem Auslesen der Seite durch eine besser erkennbare Struktur helfen.</p>

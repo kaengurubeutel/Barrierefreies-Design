@@ -1,19 +1,26 @@
 <script setup lang="ts">
 import { useRouter } from 'vue-router';
+import {watch, ref} from 'vue';
+const route = useRouter()
+const curRoute = ref(route.currentRoute);
+const checkHome = ref(true);
+const checkThemen = ref(false);
 
-
-import { ref, onMounted } from 'vue'
-
-onMounted(() => {
-    console.log(`the component is now mounted.`)
+watch(curRoute, () => {
+    console.log(route.currentRoute.value.name)
+    if(route.currentRoute.value.name == "home"){
+        checkHome.value=true;
+        checkThemen.value = false;
+    } else if(route.currentRoute.value.name == "themen"){
+        checkThemen.value = true;
+        checkHome.value = false;
+    } else {
+        checkHome.value = false;
+        checkThemen.value = false;
+    }
 })
 
-let currantRoute = ref("");
-const route = useRouter()
-currantRoute.value = route.currentRoute.value.name;
-console.log(currantRoute.value)
 
-let canGoBack = true; //ToDo realtime
 let gotoHome = () => {
     route.push("/");
 } 
@@ -22,17 +29,18 @@ let gotoHome = () => {
 <template>
     <nav>
         <menu>
-            <button @click="gotoHome" v-if="canGoBack" aria-label="backbutton" id="backbutton">
-                <img height="45px" src="../../content/back.svg" alt="backbutton">
+            <button v-if="!checkThemen" @click="$router.push('/themen')" id="menubutton">themen</button>
+            <button @click="gotoHome" v-if="!checkHome" aria-label="homebutton" id="homebutton">
+                <img height="45px" src="../../content/back.svg" alt="homebutton">
             </button>    
-        <button @click="$router.push('/themen')" id="menubutton">themen</button>
+        
         </menu>
     </nav>
 </template>
 
 
 <style scoped>
-#backbutton {
+#homebutton {
     margin:0;
     background: none;
     color: inherit;
@@ -46,18 +54,21 @@ let gotoHome = () => {
     align-items: center;
 }
 
-#backbutton:hover {
+#homebutton:hover {
     background: #2E82FF;
     border-radius: 23px;
 }
 
-#backbutton:focus {
+#homebutton:focus-visible {
     background: #2E82FF;
     border-radius: 23px;
 }
 
 #menubutton {
     color: #FCFCFC;
+    position:absolute;
+    right: 5vw;
+    top: 14px;
     font-style: normal;
     font-weight: 800;
     line-height: 128.607%;
@@ -74,7 +85,7 @@ let gotoHome = () => {
     color: #101010
 }
 
-#menubutton:focus {
+#menubutton:focus-visible {
     background-color: #2E82FF;
     color: #101010
 }
@@ -85,27 +96,26 @@ h1 {
 }
 
 nav {
+    background-color: #f5f5f5;
     position:absolute;
     z-index:100;
     top:0;
     width:100vw;
-    height:150px;
+    height:70px;
   
     display: flex;
-    flex-direction: row-reverse;
+    
     justify-content: center;
     align-items: center;
    
-    padding-top: 30px;
-    height: 20px;
+    
+  
 
 }
 
 menu {
     width:90vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    
     margin:0;
     padding:0;
 
