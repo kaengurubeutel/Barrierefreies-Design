@@ -4,8 +4,9 @@
 
 <template>
   <main>
-    <h1>Sprache</h1>
+    
     <article>
+      <h1>Sprache</h1>
         <section>
             <h2>Beispiel</h2>
             <p>Einige Menschen können komplizierter Sprache nicht folgen. Vor allem Texte mit vielen Fremdwörtern, hypotaktischer Satzstruktur oder Fachbegriffen erschweren den Zugang. Deshalb gibt es leichte Sprache, in der die Syntaktische und Semantische Struktur so angepasst wird, dass ihr leichter gefolgt werden kann. Ebenfalls ist es wichtig Gestalterische und Typografische Grundregeln einzuhalten und den entstandenen Text möglichst testen zu lassen, um zu verhindern, dass Hürden im Text übersehen werden. Beim Umschreiben von Texten in leichte Sprache ist es besonders wichtig, dass der Hauptinhalt erhalten bleibt, auch wenn aus Komplexitätsgründen, nebensächliche Satzteile herausgekürzt werden dürfen.</p>
@@ -29,6 +30,46 @@
     
 </template>
 
-<style>
+<style scoped>
+
+main{
+        position:absolute;
+        top:100px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100vw;
+        
+    }
+
+    p {
+        width: 700px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        
+    }
+
+    h2 {
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        margin-top: 20px;
+    }
+
+    ul {
+        padding:0;
+        margin:0;
+        margin-top: 10px;
+        margin-bottom:20px;
+        
+    }
+
+    img {
+        border-radius: 10px;
+        border: 2px solid #101010;
+    }
 
 </style>

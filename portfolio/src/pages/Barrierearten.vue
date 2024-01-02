@@ -4,8 +4,9 @@
 
 <template>
     <main>
-        <h1 id="beschriftung">Barrierearten</h1>
+        
         <article>
+            <h1>Barrierearten</h1>
             <section>
                 <h2>Allgemein</h2>
                 <p>In Deutschland leben nach dem <a href="https://de.statista.com/themen/261/behinderung/">Statistischen Bundesamt</a> mindestens 9,4% der Bevölkerung mit einer
@@ -83,4 +84,45 @@
 
 </template>
 
-<style scoped></style>
+<style scoped>
+
+    main{
+        position:absolute;
+        top:100px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100vw;
+       
+    }
+
+    p {
+        width: 700px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        
+    }
+
+    h2 {
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        margin-top: 20px;
+    }
+
+    ul {
+        padding:0;
+        margin:0;
+        margin-top: 10px;
+        margin-bottom:20px;
+        
+    }
+
+    img {
+        border-radius: 10px;
+        border: 2px solid #101010;
+    }
+</style>

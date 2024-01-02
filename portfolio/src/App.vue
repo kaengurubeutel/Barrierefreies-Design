@@ -12,5 +12,12 @@ import Navigation from  "./components/Navigation.vue"
 
 <style scoped>
 
+    * {
+        
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+}
+    
 
 </style>

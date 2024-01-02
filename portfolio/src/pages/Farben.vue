@@ -5,8 +5,9 @@
 
 <template>
 <main>
-    <h1>Farben und Kontraste</h1>
+    
     <article>
+        <h1>Farben und Kontraste</h1>
         <section>
             <h2>Allgemein</h2>
             <p>Für Menschen mit Sehbeeinträchtigungen oder Farbenblindheit ist es besonders wichtig, dass auf Webseiten darauf geachtet wird, dass alle Texte und Elemente gut erkennbar und unterscheidbar sind. Die WCAG bietet hierfür die notwendigen Richtlinien, welche in den folgenden Absätzen jeweils durch ein Negativ Beispiel sowie eine Variante nach WCAG AA und WCAG AAA veranschaulicht werden.</p>
@@ -37,5 +38,43 @@
 </template>
 
 <style scoped>
+    main{
+        position:absolute;
+        top:100px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100vw;
+        
+    }
 
+    p {
+        width: 700px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        
+    }
+
+    h2 {
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        margin-top: 20px;
+    }
+
+    ul {
+        padding:0;
+        margin:0;
+        margin-top: 10px;
+        margin-bottom:20px;
+        
+    }
+
+    img {
+        border-radius: 10px;
+        border: 2px solid #101010;
+    }
 </style>

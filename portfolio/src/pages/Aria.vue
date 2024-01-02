@@ -4,8 +4,9 @@
 
 <template>
   <main>
-    <h1>Accessible Rich Internet Applications (ARIA)</h1>
+    
     <article>
+        <h1>Accessible Rich Internet Applications (ARIA)</h1>
         <section>
             <h2>Allgemein</h2>
             <p>ARIA tags sind eine Ergänzung für HTML, die Screenreadern zusätzliche Informationen über DOM-Elemente geben und damit Menschen mit einer Sehbehinderung helfen können, Webseiten besser zu navigieren.</p>
@@ -66,23 +67,65 @@
         <section>
             <h3>Weitere Regeln für den Umgang mit ARIA: </h3>
             
-            <ol>
-                <li>ARIA tags sind nur dazu gedacht, Semantische Elemente zu ergänzen und nicht zu ersetzen.</li>
-                <li>Die Semantische Bedeutung von Elementen darf nicht durch ARIA verändert werden</li>
-                <li>Alle mit Aria getaggten Elemente müssen mit der Tastatur bedienbar sein</li>
-                <li>Role=“presentation“ und aria-hidden=”true” dürfen nicht auf erreichbaren Interaktiven Elementen verwendet werden, da sie sonst nicht von Screenreadern erkannt werden</li>
-                <li>Alle interaktiven Elemente müssen einen „accessible name“ haben.</li>
-                <li><a href="https://www.w3.org/TR/using-aria/#rule1">dokumentation</a></li>
-            </ol>
+            <ul>
+                <li><p>ARIA tags sind nur dazu gedacht, Semantische Elemente zu ergänzen und nicht zu ersetzen.</p></li>
+                <li><p>Die Semantische Bedeutung von Elementen darf nicht durch ARIA verändert werden</p></li>
+                <li><p>Alle mit Aria getaggten Elemente müssen mit der Tastatur bedienbar sein</p></li>
+                <li><p>Role=“presentation“ und aria-hidden=”true” dürfen nicht auf erreichbaren Interaktiven Elementen verwendet werden, da sie sonst nicht von Screenreadern erkannt werden</p></li>
+                <li><p>Alle interaktiven Elemente müssen einen „accessible name“ haben.</p></li>
+                <li><p><a href="https://www.w3.org/TR/using-aria/#rule1">Dokumentation</a></p></li>
+            </ul>
         </section>
     </article>
   </main>
 </template>
 
-<style>
+<style scoped>
  code {
     font-family: "altivo", sans-serif;
   font-size: 14px;
   color: #101010;
  }
+
+ main{
+        position:absolute;
+        top:100px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100vw;
+    }
+
+    p {
+        width: 700px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        
+    }
+
+    h2 {
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        margin-top: 20px;
+    }
+
+    ul, ol {
+        padding:0;
+        margin:0;
+        margin-top: 10px;
+        margin-bottom:20px;
+        width:700px;
+        
+    }
+
+    img {
+        border-radius: 10px;
+        border: 2px solid #101010;
+    }
+
+
 </style>
