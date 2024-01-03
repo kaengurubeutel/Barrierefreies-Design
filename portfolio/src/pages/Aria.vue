@@ -13,56 +13,47 @@
         </section>
         <section>
             <h2>Welche Aria Rollen gibt es?</h2>
-            <pre>
-                <code>
-                    &lt;section role="carousel"&gt;
-                        &lt;article role="slide"&gt;
-                            &lt;img 
-                                src="../assets/beispiel.png"
-                                aria-atomic="false" 
-                                role="status" 
-                                aria-live="polite" 
-                                aria-hidden="false" 
-                                alt="image1"/&gt;
-                        &lt;/article&gt;
-
-                        &lt;article role="slide"&gt;
-                            &lt;img 
-                                src="../assets/beispiel.png"
-                                aria-atomic="false" 
-                                role="status" 
-                                aria-live="polite" 
-                                aria-hidden="true" 
-                                alt="image2"/&gt;
-                        &lt;/article&gt;
-
-                        &lt;article role="slide"&gt;
-                            &lt;img 
-                                src="../assets/beispiel.png"
-                                aria-atomic="false" 
-                                role="status" 
-                                aria-live="polite" 
-                                aria-hidden="true" 
-                                alt="image3"/&gt;
-                        &lt;/article&gt;
-
-                        &lt;div aria-lable="carousel-control"&gt;
-                            &lt;button role="next slide control"&gt;&lt;/button&gt;
-                            &lt;button role="previous slide control"&gt;&lt;/button&gt;
-                        &lt;/div&gt;
-                    &lt;/section&gt;
+            <div id="content">
+                <section>
+                            <h3 style="background-color:lightseagreen; width:300px;">Document Structure Roles</h3>
+                            <p>Beschreiben Strukturellen Aufbau der Webseite</p>
+                            <h3 style="background-color:cornflowerblue; width:300px;">Widget Roles</h3>
+                            <p>Beschreiben Interaktive Elemente und erfordern i.d.R. Javascript im Hintergrund</p>
+                            <h3 style="background-color:darksalmon; width:300px;">Landmark Roles</h3>
+                            <p>Orientierungspunkte in der Webseite wie z.B.: Das Danner, die Navigationsleiste oder Sections wie in diesem Beispiel.</p>
+                            <h3 style="background-color:moccasin; width:300px;" >Live Region Roles</h3>
+                            <p>Bei sich verändernden Objekten kann der Screenreader nur ein Element auf einmal vorlesen, dafür sind Live Region roles da, die dem Screenreader erklären, was als erstes vorgelesen werden soll und was z.b. gar nicht vorgelesen werden soll.</p>
+                            <h3>Window Roles</h3>
+                            <p>Wenn sich ein neues Fenster über dem aktuellen Fenster öffnet werden diese Rollen verwendet.</p>
+                </section>
+                        
+                <aside>
+                        <pre id="code">
+                <p style="width:400px;"><code>
+                  <span style="background-color:darksalmon;">&lt;section</span> <span style="background-color:cornflowerblue;">role="carousel"&gt;</span>
+                        
+                         <span style="background-color:lightseagreen;">&lt;img </span>
+                            <span style="background-color:cornflowerblue;">role="slide"</span>
+                            src="../assets/beispiel.png"
+                            <span style="background-color:moccasin;">aria-atomic="false" </span>
+                            role="status" 
+                            <span style="background-color:moccasin;">aria-live="polite"</span>
+                            aria-hidden="false" 
+                            alt="image1"/&gt;
+                        
+                       <span style="background-color:cornflowerblue;">&lt;menu</span>  aria-lable="carousel-control"&gt;
+                            &lt;button <span style="background-color:cornflowerblue;">role="next slide control"</span>&gt;&lt;/button&gt;
+                            &lt;button <span style="background-color:cornflowerblue;">role="previous slide control"</span>&gt;&lt;/button&gt;
+                        <span style="background-color:cornflowerblue;">&lt;/menu&gt;</span>
+                    <span style="background-color:darksalmon;">&lt;/section&gt;</span>
                 </code>
+            </p> 
             </pre>
-            <h3>Document Structure Roles</h3>
-            <p>Beschreiben Strukturellen Aufbau der Webseite sollten aber nur wie in diesem Fall benutzt werden, wenn sie nötige Informationen über spezielle Elemente beinhalten</p>
-            <h3>Widget Roles</h3>
-            <p>Beschreiben Interaktive Elemente und erfordern i.d.R. Javascript im Hintergrund</p>
-            <h3>Landmark Roles</h3>
-            <p>Orientierungspunkte in der Webseite wie zb Das banner, die navigationsleiste oder Sections wie in diesem Beispiel.</p>
-            <h3>Live Region Roles</h3>
-            <p>Bei sich verändernden Objekten kann der Screenreader nur ein Element auf einmal vorlesen, dafür sind Live Region roles da, die dem Screenreader erklären, was als erstes vorgelesen werden soll und was z.b. gar nicht vorgelesen werden soll.</p>
-            <h3>Window Roles</h3>
-            <p>Wenn sich ein neues Fenster über dem aktuellen Fenster öffnet werden diese Rollen verwendet.</p>
+                </aside>
+              
+                
+            </div>
+            
         </section>
         <section>
             <h3>Weitere Regeln für den Umgang mit ARIA: </h3>
@@ -127,5 +118,9 @@
         border: 2px solid #101010;
     }
 
-
+    #content {
+        display:flex;
+        flex-direction: row;
+        
+    }
 </style>
