@@ -1,12 +1,30 @@
 <script setup lang="ts">
 
-    import {ref} from 'vue'
-    const buttonsChecked = ref(false);
-    const checkboxChecked = ref(false);
-    const textfieldChecked = ref(false);
-    const errorChecked = ref(false);
-    const neccecaryChecked = ref(true);
+import { ref } from 'vue'
 
+const stateVars = ['button', 'check', 'text', 'error', 'necc'];
+// variable for setting an active state to articles and highlighting
+// button, check, text, error, necc
+let statecount = 0;
+const state = ref(stateVars[statecount]);
+
+
+
+let nextState = () => {
+    statecount = (statecount + 1) % stateVars.length;
+    state.value = stateVars[statecount];
+}
+
+let prevState = () => {
+    if (statecount == 0) {
+        statecount = stateVars.length - 1;
+        state.value = stateVars[statecount];
+        return;
+    }
+
+    statecount--;
+    state.value = stateVars[statecount];
+}
 
 
 </script>
@@ -23,48 +41,68 @@
                     worauf geachtet werden muss, wenn man ein Formular Barrierefrei gestalten möchte.</p>
             </section>
             <section id="beispiel">
+
                 <aside>
                     <form>
                         <h2>Probier mich!</h2>
-                        <label for="vorname">Vorname (notwändig)</label>
-                        <input id="vorname" type="text">
-                        <label for="nachname">Nachname (notwändig)</label>
-                        <input id="nachname" type="text">
-                        <h3>Meine Lieblingsprogrammiersprache</h3>
-                        <div class="radio">
-                            <input type="radio" id="language1" name="language" value="JS">
-                            <label for="language1">Javascript/Typescript</label>
-                        </div>
-                        <div class="radio">
-                            <input type="radio" id="language2" name="language" value="Python">
-                            <label for="language2">Python</label>
+                        <label :class="{ highlight: state == 'necc' }" for="vorname">Vorname (notwändig)</label>
+                        <input :class="{ highlight: state == 'text' }" id="vorname" type="text">
+                        <div :class="{ error2: state == 'error' }">
+                            <label :class="{ highlight: state == 'necc' }" for="nachname">Nachname (notwändig)</label>
+                            <input :class="{ errorhighlight: state == 'error' }" id="nachname" type="text">
                         </div>
 
-                        <div class="radio">
-                            <input type="radio" id="language3" name="language" value="Ruby">
-                            <label for="language3">Ruby</label>
-                        </div>
-                        <div class="radio">
-                            <input type="radio" id="language4" name="language" value="PHP">
-                            <label for="language4">PHP (ich bin ein Psychopath)</label>
-                        </div>
+                        <p class="error" v-if="state == 'error'">Ein Name kann nicht aus Zahlen bestehen</p>
+
+                        <fieldset>
+                            <legend>
+                                <h3>Meine Lieblingsprogrammiersprache</h3>
+                            </legend>
+                            <div :class="{ highlight: state == 'check' }" class="radio">
+                                <input type="radio" id="language1" name="language" value="JS">
+                                <label for="language1">Javascript/Typescript</label>
+                            </div>
+                            <div :class="{ highlight: state == 'check' }" class="radio">
+                                <input type="radio" id="language2" name="language" value="Python">
+                                <label for="language2">Python</label>
+                            </div>
+
+                            <div :class="{ highlight: state == 'check' }" class="radio">
+                                <input type="radio" id="language3" name="language" value="Ruby">
+                                <label for="language3">Ruby</label>
+                            </div>
+                            <div :class="{ highlight: state == 'check' }" class="radio">
+                                <input type="radio" id="language4" name="language" value="PHP">
+                                <label for="language4">PHP</label>
+                            </div>
+                        </fieldset>
 
 
-                        <button id="testbutton">Probier Mich!</button>
+
+
+                        <button lable="probier mich" :class="{ highlight: state == 'button' }" id="testbutton">Probier Mich!</button>
                     </form>
                 </aside>
-                <section>
-                    <section v-if="buttonsChecked">
+
+                <section id="textsection">
+                    <menu id="menu">
+                        <button lable="zurück" @click="prevState" class="menubutton"><img class="articlemenu"
+                                src="../../content/arrowbutton.svg" alt="Vorheriger Artikel" /></button>
+                        <button lable="weiter" @click="nextState" class="menubutton"><img style="transform: rotate(180deg)"
+                                class="articlemenu" src="../../content/arrowbutton.svg" alt="Nächster Artikel" /></button>
+                    </menu>
+                    <section class="sidetext" v-if="state == 'button'">
                         <h2>Buttons/Links</h2>
                         <ul>
                             <li>
-                                <p>Ein Button ist ein UI-Element, das eine Aktion ausführt</p>
+                                <p class="sidetext">Ein Button ist ein UI-Element, das eine Aktion ausführt</p>
                             </li>
                             <li>
-                                <p>Ein Link ist ein Element, dass zu einer Seite navigiert</p>
+                                <p class="sidetext">Ein Link ist ein Element, dass zu einer Seite navigiert</p>
                             </li>
                         </ul>
-                        <p>In unserem Beispiel haben wir einen Button, mit dem die obenstehenden Daten bestätigt werden, und
+                        <p class="sidetext">In unserem Beispiel haben wir einen Button, mit dem die obenstehenden Daten
+                            bestätigt werden, und
                             der zum
                             nächsten Schritt des Formulars leitet. <br /> In diesem Fall habe ich einen Button benutzt, da
                             er zwar
@@ -74,24 +112,24 @@
                     </section>
 
 
-                    <section v-if="checkboxChecked">
-                        <h2>Checkboxen</h2>
-                        <p class="sidetext">Checkboxen sind ein UI Element für Formulare in dem ein oder mehrere Auswahlmöglichkeiten
-                            markiert werden
-                            können.
+                    <section v-if="state == 'check'">
+                        <h2>Radioboxen</h2>
+                        <p class="sidetext">Radiobuttons sind ein UI Element für Formulare in dem eine Auswahlmöglichkeiten
+                            markiert werden kann.
                             In der WCAG Dokumentation heißt es dazu, dass eine Checkbox entweder über das eigene Element mit
-                            role=“checkbox“, oder per aria-labelled-by von einem 2. Element beschrieben werden muss.
-                            Ebenfalls muss die Checkbox per Lehrtaste aktiviert oder deaktiviert werden können und per ARIA
-                            anzeigen
-                            ob sie aktiv ist oder nicht.
-                            In diesem Fall wäre die Checkbox über das nebenstehende Lable Element definiert.
+                            role=“radio“, oder per aria-labelled-by von einem 2. Element beschrieben werden muss.
+                            Ebenfalls muss der Radiobutton per Pfeiltaste aktiviert oder deaktiviert werden können und per
+                            ARIA
+                            anzeigen ob sie aktiv ist oder nicht.
+                            In diesem Fall wäre die Checkbox über die Überschrift definiert.
                         </p>
                     </section>
 
 
-                    <section v-if="textfieldChecked">
+                    <section v-if="state == 'text'">
                         <h2>Textfelder</h2>
-                        <p class="sidetext"> In Textfeldern kann vom Nutzer Text eingegeben werden. Hierbei ist ebenfalls wichtig, dass immer
+                        <p class="sidetext"> In Textfeldern kann vom Nutzer Text eingegeben werden. Hierbei ist ebenfalls
+                            wichtig, dass immer
                             klar
                             ist was in dem Feld gefordert wird. Bei kritischen Feldern muss es ebenfalls möglich sein die
                             Daten noch
@@ -107,9 +145,10 @@
                     </section>
 
 
-                    <section v-if="errorChecked">
+                    <section v-if="state == 'error'">
                         <h2>Fehlermeldungen</h2>
-                        <p class="sidetext">Sollten in dem Formular Fehler auftreten, zum Beispiel ein Feld vergessen worden sein, müssen an
+                        <p class="sidetext">Sollten in dem Formular Fehler auftreten, zum Beispiel ein Feld vergessen worden
+                            sein, müssen an
                             dem
                             Element Fehlermeldungen auftreten. Um WCAG AA zu erfüllen, müssen diese ebenfalls erklären wie
                             der
@@ -120,9 +159,10 @@
                     </section>
 
 
-                    <section v-if="neccecaryChecked">
+                    <section v-if="state == 'necc'">
                         <h2>Pflichtfelder</h2>
-                        <p class="sidetext">Normal befindet sich neben dem Lable ein Sternchen, das visuell anzeigt, dass es sich um ein
+                        <p class="sidetext">Normal befindet sich neben dem Lable ein Sternchen, das visuell anzeigt, dass es
+                            sich um ein
                             Pflichtfeld
                             handelt. Dieses Sternchen wird jedoch von Screenreadern nicht richtig erkannt, weshalb man
                             entweder ein
@@ -182,6 +222,15 @@ img {
     border: 2px solid #101010;
 }
 
+#textsection {
+
+    height: 650px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
 form {
     display: flex;
     flex-direction: column;
@@ -203,6 +252,19 @@ input[type=text] {
     color: #101010;
     margin: 5px;
     padding: 4px;
+}
+
+.error {
+    border: 3px solid rgb(174, 0, 0);
+    width: 200px;
+    padding: 5px;
+    color: rgb(174, 0, 0);
+    font-size: 16px;
+}
+
+.errorhighlight {
+    border: 3px solid rgb(174, 0, 0);
+    padding: 5px;
 }
 
 input[type=radio] {
@@ -227,14 +289,12 @@ input[type=radio] {
 
 
 .radio {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-#beispiel{
+#beispiel {
     display: flex;
     gap: 50px;
     justify-content: center;
@@ -243,10 +303,63 @@ input[type=radio] {
     margin-top: 50px;
 }
 
-.sidetext{
+.sidetext {
     width: 400px;
 }
 
+.highlight {
+    border: 3px solid blue;
+    padding: 5px;
+}
 
+#menu {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+
+.articlemenu {
+    border: 0px;
+}
+
+.articlemenu:hover {
+    background-color: #2E82FF;
+    border-radius: 50%;
+}
+
+button:focus-visible {
+    background-color: #2E82FF;
+    border: 2px solid #000
+}
+
+.articlemenu:active {
+    background-color: #82b4ff;
+    border-radius: 50%;
+}
+
+.menubutton {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    height:60px;
+    width:60px;
+}
+
+.error2 {
+    border: 3px solid rgb(174, 0, 0);
+    color: rgb(174, 0, 0);
+}
+
+fieldset {
+    all: unset;
+    text-align: left;
+}
 
 </style>
