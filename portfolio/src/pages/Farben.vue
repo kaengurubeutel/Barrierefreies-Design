@@ -33,11 +33,12 @@
                 </li>
             </ul>
         </section>
-        <section>
+        <section id="section3">
            
             <h2>Farben</h2>
-             <img src="../../content/Farbe3.png" alt="Abb1: Schlechter Farbkontrast, es werden sehr Ähnliche Grüntöne benutzt. Abb2: Es werden Farben benutzt die sich in der Sättigung stärker unterscheiden">
-            <p>Bei Farben ist es wichtig, dass sie auch für Menschen mit einer Farbenblindheit unterscheidbar sind.  Das heißt dass ZB Grün und Rottöne trotz der Farbenblindheitblindheit unterscheidbar sind.</p>
+            <img src="../../content/Farbe3.png" alt="Abb1: Schlechter Farbkontrast, es werden sehr Ähnliche Grüntöne benutzt. Abb2: Es werden Farben benutzt die sich in der Sättigung stärker unterscheiden">
+            <img src="../../content/Farbe4.png" alt="">
+             <p>Bei Farben ist es wichtig, dass sie auch für Menschen mit einer Farbenblindheit unterscheidbar sind.  Das heißt dass ZB Grün und Rottöne trotz der Farbenblindheitblindheit unterscheidbar sind.</p>
         </section>
     </article>
 </main>    
@@ -52,7 +53,6 @@
         justify-content: center;
         flex-direction: column;
         width: 100vw;
-        
     }
 
     p {
@@ -69,6 +69,7 @@
 
     h3 {
         margin-top: 20px;
+        margin-bottom: 30px;
     }
 
     ul {
@@ -82,5 +83,12 @@
     img {
         border-radius: 10px;
         border: 2px solid #101010;
+        width:700px;
+    }
+
+    section{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
     }
 </style>
