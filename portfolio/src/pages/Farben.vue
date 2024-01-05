@@ -17,12 +17,16 @@
             <ul>
                 <li>
                     <h3>Text, Bilder von Text, Icons</h3>
+                     <img src="../../content/Farbe1.png" alt="Zwei mal Text, einer mit hohem Kontrast und einer mit niedrigem">
+                   
                     <p><strong>AA: </strong> 4,5:1</p>
                     <p><strong>AAA: </strong> 7:1</p>
                     <p>Hierzu Zählen alle Arten von Fließtext, ob als Textelement oder Bild und Icons</p>
                 </li>
                 <li>
                     <h3>UI Elemente, Grafiken, Großer Text</h3>
+                                        <img src="../../content/Farbe2.png" alt="2 Buttons mit unterschiedlich ausgeprägtem Kontrast, jeweils ein positiv und ein negativ Beispiel">
+
                     <p><strong>AA: </strong> 4,5:1</p>
                     <p><strong>AAA: </strong> 7:1</p>
                     <p>Hierzu zählt Text ab 18,5px in bold oder ab 24px in regular, Aktive UI-Elemente und Infografiken</p>
@@ -30,7 +34,9 @@
             </ul>
         </section>
         <section>
+           
             <h2>Farben</h2>
+             <img src="../../content/Farbe3.png" alt="Abb1: Schlechter Farbkontrast, es werden sehr Ähnliche Grüntöne benutzt. Abb2: Es werden Farben benutzt die sich in der Sättigung stärker unterscheiden">
             <p>Bei Farben ist es wichtig, dass sie auch für Menschen mit einer Farbenblindheit unterscheidbar sind.  Das heißt dass ZB Grün und Rottöne trotz der Farbenblindheitblindheit unterscheidbar sind.</p>
         </section>
     </article>

@@ -47,31 +47,32 @@ let prevState = () => {
                         <h2>Probier mich!</h2>
                         <label :class="{ highlight: state == 'necc' }" for="vorname">Vorname (notwändig)</label>
                         <input :class="{ highlight: state == 'text' }" id="vorname" type="text">
-                        <div :class="{ error2: state == 'error' }">
+                        <div aria-label="nachname" :class="{ error2: state == 'error' }">
                             <label :class="{ highlight: state == 'necc' }" for="nachname">Nachname (notwändig)</label>
-                            <input :class="{ errorhighlight: state == 'error' }" id="nachname" type="text">
+                            <input :class="{ errorhighlight: state == 'error' }" id="nachname" type="text"><br/>
+                            <lable class="error" v-if="state == 'error'">Ein Name kann nicht aus Zahlen bestehen</lable>
                         </div>
 
-                        <p class="error" v-if="state == 'error'">Ein Name kann nicht aus Zahlen bestehen</p>
+                        
 
                         <fieldset>
                             <legend>
                                 <h3>Meine Lieblingsprogrammiersprache</h3>
                             </legend>
-                            <div :class="{ highlight: state == 'check' }" class="radio">
+                            <div aria-label="Javascript/Typescript" :class="{ highlight: state == 'check' }" class="radio">
                                 <input type="radio" id="language1" name="language" value="JS">
                                 <label for="language1">Javascript/Typescript</label>
                             </div>
-                            <div :class="{ highlight: state == 'check' }" class="radio">
+                            <div aria-label="Python" :class="{ highlight: state == 'check' }" class="radio">
                                 <input type="radio" id="language2" name="language" value="Python">
                                 <label for="language2">Python</label>
                             </div>
 
-                            <div :class="{ highlight: state == 'check' }" class="radio">
+                            <div aria-label="Ruby" :class="{ highlight: state == 'check' }" class="radio">
                                 <input type="radio" id="language3" name="language" value="Ruby">
                                 <label for="language3">Ruby</label>
                             </div>
-                            <div :class="{ highlight: state == 'check' }" class="radio">
+                            <div aria-label="PHP" :class="{ highlight: state == 'check' }" class="radio">
                                 <input type="radio" id="language4" name="language" value="PHP">
                                 <label for="language4">PHP</label>
                             </div>
@@ -255,7 +256,7 @@ input[type=text] {
 }
 
 .error {
-    border: 3px solid rgb(174, 0, 0);
+  
     width: 200px;
     padding: 5px;
     color: rgb(174, 0, 0);

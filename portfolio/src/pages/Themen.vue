@@ -74,7 +74,7 @@ menu {
     font: inherit;
     cursor: pointer;
     outline: inherit;
-    font-family: "altivo", sans-serif;
+    font-family: "noto", sans-serif;
     width: 90vw;
     padding-top: 15px;
     padding-bottom: 15px;

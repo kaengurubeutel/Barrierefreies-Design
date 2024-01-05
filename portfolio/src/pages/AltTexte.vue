@@ -24,8 +24,9 @@
         </section>
         <section>
             <h2>Informationsgrafik</h2>
-            <img src="" alt=""/>
-            <p></p>
+            <img src="../../content/Alttext3.png" alt="Warum ich Infografiken bei Artikeln liebe: 60%: Bin zu faul den Text zu lesen, 22%: Wirken Wissenschaftlich fundiert, 10%: Erinnern an Torte, 8% Sind schön Bunt"/>
+            <p>https://www.profil.at/gesellschaft/warum-infografiken-diagramme-internet-5692507</p>
+            <p>Infografiken Beinhalten Diagramme oder andere Datenvisualierungen. Diese Daten müssen im Alttag wiedergegeben werden. In diesem Fall: Warum ich Infografiken bei Artikeln liebe: 60%: Bin zu faul den Text zu lesen, 22%: Wirken Wissenschaftlich fundiert, 10%: Erinnern an Torte, 8% Sind schön Bunt </p>
         </section>
         <section>
             <h2>Dekorative Bilder</h2>
@@ -35,12 +36,13 @@
         <section>
             <h2>Funktionale Bilder </h2>
             <p> Diese Bilder stehen für eine Funktion. In diesem Fall das Homeicon der Webseite. Bei diesen Bildern steht die Funktion des Bildes im alt tag. 
-                Hier also „Startseite von Barrierefreies Design“
+                Hier also „Homebutton“
             </p>
         </section>
         <section>
             <h2>Schriftgrafiken</h2>
             <p>Schriftgrafiken sind Bilder, in denen sich Text befindet. Im alt tag wird dann die Schrift aus dem Bild angegeben oder auf einen Text außerhalb des Bildes verwiesen.</p>
+            <img src="../../content/Alttext2.png" alt="Ein Mensch ist immer Opfer seiner Wahrheiten, Albert Camus, 1942"/>
         </section>
     </article>
     
