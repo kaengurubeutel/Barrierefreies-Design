@@ -4,7 +4,7 @@
 
 <template>
     <main>
-        <article>
+        <article id="main">
             <h1>WCAG Analyse</h1>
             <section>
                 <h2>Allgemein</h2>

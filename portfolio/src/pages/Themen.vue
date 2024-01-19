@@ -3,7 +3,7 @@
 
 <template>
     <main>
-        <menu>
+        <menu id="main">
             <li><button @click="$router.push('/barrierearten')" class="menuitem">
                     <h2>Barrierearten</h2>
                 </button></li>

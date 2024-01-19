@@ -5,7 +5,7 @@
 <template>
   <main>
     
-    <article>
+    <article id="main">
       <h1>Typografie</h1>
         <section>
             <h2>Allgemein</h2>

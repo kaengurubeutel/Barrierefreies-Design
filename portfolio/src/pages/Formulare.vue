@@ -1,37 +1,15 @@
 <script setup lang="ts">
 
-import { ref } from 'vue'
-
-const stateVars = ['button', 'check', 'text', 'error', 'necc'];
-// variable for setting an active state to articles and highlighting
-// button, check, text, error, necc
-let statecount = 0;
-const state = ref(stateVars[statecount]);
-
-
-
-let nextState = () => {
-    statecount = (statecount + 1) % stateVars.length;
-    state.value = stateVars[statecount];
-}
-
-let prevState = () => {
-    if (statecount == 0) {
-        statecount = stateVars.length - 1;
-        state.value = stateVars[statecount];
-        return;
-    }
-
-    statecount--;
-    state.value = stateVars[statecount];
-}
 
 
 </script>
 
 <template>
     <main>
-        <article>
+        <article id="main">
+
+
+
             <h1>Formulare</h1>
             <section>
                 <h2>Allgemein</h2>
@@ -49,50 +27,42 @@ let prevState = () => {
                         <input :class="{ highlight: state == 'text' }" id="vorname" type="text">
                         <div aria-label="nachname" :class="{ error2: state == 'error' }">
                             <label :class="{ highlight: state == 'necc' }" for="nachname">Nachname (notwändig)</label>
-                            <input :class="{ errorhighlight: state == 'error' }" id="nachname" type="text"><br/>
+                            <input :class="{ errorhighlight: state == 'error' }" id="nachname" type="text"><br />
                             <lable class="error" v-if="state == 'error'">Ein Name kann nicht aus Zahlen bestehen</lable>
                         </div>
 
-                        
+
 
                         <fieldset>
                             <legend>
                                 <h3>Meine Lieblingsprogrammiersprache</h3>
                             </legend>
-                            <div aria-label="Javascript/Typescript" :class="{ highlight: state == 'check' }" class="radio">
+                            <div>
                                 <input type="radio" id="language1" name="language" value="JS">
                                 <label for="language1">Javascript/Typescript</label>
                             </div>
-                            <div aria-label="Python" :class="{ highlight: state == 'check' }" class="radio">
+                            <div>
                                 <input type="radio" id="language2" name="language" value="Python">
                                 <label for="language2">Python</label>
                             </div>
-
-                            <div aria-label="Ruby" :class="{ highlight: state == 'check' }" class="radio">
+                            <div>
                                 <input type="radio" id="language3" name="language" value="Ruby">
                                 <label for="language3">Ruby</label>
                             </div>
-                            <div aria-label="PHP" :class="{ highlight: state == 'check' }" class="radio">
+                            <div>
                                 <input type="radio" id="language4" name="language" value="PHP">
                                 <label for="language4">PHP</label>
                             </div>
+
                         </fieldset>
-
-
-
-
-                        <button lable="probier mich" :class="{ highlight: state == 'button' }" id="testbutton">Probier Mich!</button>
+                        <button lable="probier mich" :class="{ highlight: state == 'button' }" id="testbutton">Probier
+                            Mich!</button>
                     </form>
                 </aside>
 
                 <section id="textsection">
-                    <menu id="menu">
-                        <button lable="zurück" @click="prevState" class="menubutton"><img class="articlemenu"
-                                src="../../content/arrowbutton.svg" alt="Vorheriger Artikel" /></button>
-                        <button lable="weiter" @click="nextState" class="menubutton"><img style="transform: rotate(180deg)"
-                                class="articlemenu" src="../../content/arrowbutton.svg" alt="Nächster Artikel" /></button>
-                    </menu>
-                    <section class="sidetext" v-if="state == 'button'">
+
+                    <section >
                         <h2>Buttons/Links</h2>
                         <ul>
                             <li>
@@ -113,7 +83,7 @@ let prevState = () => {
                     </section>
 
 
-                    <section v-if="state == 'check'">
+                    <section >
                         <h2>Radioboxen</h2>
                         <p class="sidetext">Radiobuttons sind ein UI Element für Formulare in dem eine Auswahlmöglichkeiten
                             markiert werden kann.
@@ -127,7 +97,7 @@ let prevState = () => {
                     </section>
 
 
-                    <section v-if="state == 'text'">
+                    <section >
                         <h2>Textfelder</h2>
                         <p class="sidetext"> In Textfeldern kann vom Nutzer Text eingegeben werden. Hierbei ist ebenfalls
                             wichtig, dass immer
@@ -146,7 +116,7 @@ let prevState = () => {
                     </section>
 
 
-                    <section v-if="state == 'error'">
+                    <section >
                         <h2>Fehlermeldungen</h2>
                         <p class="sidetext">Sollten in dem Formular Fehler auftreten, zum Beispiel ein Feld vergessen worden
                             sein, müssen an
@@ -160,7 +130,7 @@ let prevState = () => {
                     </section>
 
 
-                    <section v-if="state == 'necc'">
+                    <section >
                         <h2>Pflichtfelder</h2>
                         <p class="sidetext">Normal befindet sich neben dem Lable ein Sternchen, das visuell anzeigt, dass es
                             sich um ein
@@ -256,7 +226,7 @@ input[type=text] {
 }
 
 .error {
-  
+
     width: 200px;
     padding: 5px;
     color: rgb(174, 0, 0);
@@ -290,13 +260,14 @@ input[type=radio] {
 
 
 .radio {
-    
+
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
 #beispiel {
     display: flex;
+    flex-direction: column;
     gap: 50px;
     justify-content: center;
     align-items: center;
@@ -305,7 +276,7 @@ input[type=radio] {
 }
 
 .sidetext {
-    width: 400px;
+    width: 700px;
 }
 
 .highlight {
@@ -349,8 +320,8 @@ button:focus-visible {
     font: inherit;
     cursor: pointer;
     outline: inherit;
-    height:60px;
-    width:60px;
+    height: 60px;
+    width: 60px;
 }
 
 .error2 {
@@ -363,4 +334,10 @@ fieldset {
     text-align: left;
 }
 
+fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
 </style>

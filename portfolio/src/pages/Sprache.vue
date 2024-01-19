@@ -5,7 +5,7 @@
 <template>
   <main>
     
-    <article>
+    <article id="main">
       <h1>Sprache</h1>
         <section>
             <h2>Beispiel</h2>

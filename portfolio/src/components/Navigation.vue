@@ -29,6 +29,7 @@ let gotoHome = () => {
 <template>
     <nav>
         <menu>
+            <a href="#main" class="skip-to-main-content-link">Skip to maincontent</a>
             <button v-if="!checkThemen" @click="$router.push('/themen')" id="menubutton">themen</button>
             <button @click="gotoHome" v-if="!checkHome" aria-label="homebutton" id="homebutton">
                 <img height="45px" src="../../content/back.svg" alt="homebutton">
@@ -40,6 +41,23 @@ let gotoHome = () => {
 
 
 <style scoped>
+.skip-to-main-content-link {
+  position: absolute;
+  left: -9999px;
+  z-index: 999;
+  padding: 1em;
+  background-color: black;
+  color: white;
+  opacity: 0;
+  border-radius: 20px
+}
+.skip-to-main-content-link:focus-visible {
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 1;
+
+}
+
 #homebutton {
     margin:0;
     background: none;

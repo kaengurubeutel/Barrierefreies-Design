@@ -5,7 +5,7 @@
 <template>
   <main>
     
-    <article>
+    <article id="main">
         <h1>Accessible Rich Internet Applications (ARIA)</h1>
         <section>
             <h2>Allgemein</h2>
@@ -28,7 +28,7 @@
                 </section>
                         
                 <aside>
-                        <pre id="code">
+                <pre id="code" aria-hidden="true">
                 <p style="width:400px;"><code>
                   <span style="background-color:darksalmon;">&lt;section</span> <span style="background-color:cornflowerblue;">role="carousel"&gt;</span>
                         

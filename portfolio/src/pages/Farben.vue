@@ -6,7 +6,7 @@
 <template>
 <main>
     
-    <article>
+    <article id="main">
         <h1>Farben und Kontraste</h1>
         <section>
             <h2>Allgemein</h2>
