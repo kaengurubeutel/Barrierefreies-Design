@@ -14,7 +14,7 @@
           Texte und Elemente gut erkennbar und unterscheidbar sind. Die WCAG
           bietet hierfür die notwendigen Richtlinien, welche in den folgenden
           Absätzen jeweils durch ein Negativ Beispiel sowie eine Variante nach
-          WCAG AA und WCAG AAA veranschaulicht werden.
+          WCAG AAA.
         </p>
       </section>
       <section>
@@ -60,7 +60,7 @@
         <p>
           Bei Farben ist es wichtig, dass sie auch für Menschen mit einer
           Farbenblindheit unterscheidbar sind. Das heißt dass ZB Grün und
-          Rottöne trotz der Farbenblindheitblindheit unterscheidbar sind.
+          Rottöne trotz der Farbenblindheit unterscheidbar sind.
         </p>
       </section>
     </article>

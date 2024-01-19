@@ -28,7 +28,7 @@ let gotoHome = () => {
 <template>
   <nav>
     <menu>
-      <a href="#main" class="skip-to-main-content-link">Skip to maincontent</a>
+      <a href="#main" class="skip-to-main-content-link">Zum Hauptinhalt springen</a>
       <button
         v-if="!checkThemen"
         @click="$router.push('/themen')"
