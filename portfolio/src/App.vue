@@ -1,18 +1,11 @@
 <script setup lang="ts">
-import { RouterView} from 'vue-router'
-import Navigation from  "./components/Navigation.vue"
-
-
+import { RouterView } from "vue-router";
+import Navigation from "./components/Navigation.vue";
 </script>
 
 <template>
-<Navigation></Navigation>
-<RouterView></RouterView>
+  <Navigation></Navigation>
+  <RouterView></RouterView>
 </template>
 
-<style scoped>
-
-    
-    
-
-</style>
+<style scoped></style>
